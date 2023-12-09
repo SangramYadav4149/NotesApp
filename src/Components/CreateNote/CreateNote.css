@@ -1,0 +1,107 @@
+.create-note-wrapper {
+  width: max-content;
+  position: relative;
+}
+
+.create-note-container {
+  width: 33rem;
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 1rem;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.group-name {
+  height: 100%;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.create-note {
+  height: 100%;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.choose-color {
+  height: 115%;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.color-sec {
+  margin-top: 1rem;
+}
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  column-gap: 2rem;
+  align-items: center;
+  margin-left: 1rem;
+}
+.container > input {
+  display: block;
+  font-size: 1.1rem;
+  width: 18rem;
+  padding: 0.5rem 0rem;
+  border-radius: 20px;
+  border: 2px solid #cccccc;
+  padding-left: 1rem;
+}
+.colors-container .color {
+  width: max-content;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.colors-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  width: max-content;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+.create-note-btn {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+.create-note-btn > button {
+  padding: 0.4rem 1rem;
+  width: 7rem;
+  background-color: blue;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  margin-right: 1.4rem;
+}
+.close {
+  top: 0;
+  position: absolute;
+  font-size: 2rem;
+  font-weight: 600;
+  right: 1rem;
+  width: max-content;
+  cursor: pointer;
+}
+.border-on {
+  border: 2px solid black;
+  cursor: pointer;
+}
+.border-off {
+  border: 2px solid white;
+  cursor: pointer;
+}
+.display-none {
+  opacity: 0.5;
+}
+.display-show {
+  opacity: initial;
+}

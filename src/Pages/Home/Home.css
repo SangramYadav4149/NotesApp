@@ -1,0 +1,30 @@
+.home-wrapper {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+.wrapper-container {
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.add-note-on {
+  display: block;
+  position: absolute;
+  z-index: 3;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+}
+.add-note-off {
+  width: max-content;
+  display: none;
+}
+.opacity-on {
+  opacity: 0.4;
+}

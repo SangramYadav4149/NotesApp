@@ -1,6 +1,6 @@
 import React from "react";
 import "./NotesLeft.css";
-const NotesLeft = () => {
+const NotesLeft = ({ showCreateSection, setShowCreateSection }) => {
   let v = [
     { title: "My Notes" },
     { title: "My Notes" },
@@ -14,7 +14,7 @@ const NotesLeft = () => {
     { title: "My Notes uuuuu" },
     { title: "my Gst" },
   ];
-  const b = [9, 7];
+
   return (
     <section className="notes-left-wrapper">
       <div className="notes-left-container">
@@ -41,7 +41,12 @@ const NotesLeft = () => {
           })}
         </div>
         <div className="add-note">
-          <span className="add-icon">+</span>
+          <span
+            onClick={() => setShowCreateSection(!showCreateSection)}
+            className="add-icon"
+          >
+            +
+          </span>
         </div>
       </div>
     </section>

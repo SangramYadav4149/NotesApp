@@ -1,15 +1,13 @@
 .notes-left-wrapper {
-  width: max-content;
+  min-width: 25vw;
   position: relative;
 }
 .notes-left-container {
-  margin-left: 2rem;
-  width: 20rem;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: start;
-
   position: relative;
 }
 .notes-left-header {
@@ -34,7 +32,7 @@
   background-color: #16008b;
   position: fixed;
   bottom: 1rem;
-  left: 17rem;
+  left: 19vw;
   z-index: 5;
   cursor: pointer;
 }
@@ -50,33 +48,40 @@
 }
 .all-notes-container {
   width: 100%;
-  position: relative;
-  z-index: 1;
+
   height: 85vh;
   overflow: auto;
 }
 .notes {
-  width: 100%;
+  width: max-content;
   display: flex;
   justify-content: start;
   align-items: center;
-  column-gap: 2rem;
+  column-gap: 1.5rem;
   margin-bottom: 1.5rem;
   font-size: 1.1rem;
   font-weight: 600;
   cursor: pointer;
+  padding-left: 1.5rem;
 }
 .notes .intial-tag {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: brown;
+
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: 600;
   color: white;
   font-size: 1rem;
+}
+.notes .intial-tag > span {
+  font-size: 1.2rem;
+}
+.notes .note-title {
+  display: block;
+  padding-bottom: 0.2rem;
 }
 .all-notes-container::-webkit-scrollbar {
   width: 5px;
@@ -89,4 +94,106 @@
 .all-notes-container::-webkit-scrollbar-thumb {
   background: linear-gradient(#0f3443, #34e89e);
   border-radius: 20px;
+}
+.display-none {
+  display: none;
+}
+@media (max-width: 1300px) {
+  .notes-left-wrapper {
+    min-width: 30vw;
+    position: relative;
+  }
+  .add-note {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: #16008b;
+    position: fixed;
+    bottom: 1rem;
+    left: 23vw;
+    z-index: 5;
+    cursor: pointer;
+  }
+}
+@media (max-width: 1000px) {
+  .notes-left-wrapper {
+    min-width: 35vw;
+    position: relative;
+  }
+  .add-note {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: #16008b;
+    position: fixed;
+    bottom: 1rem;
+    left: 26.5vw;
+    z-index: 5;
+    cursor: pointer;
+  }
+}
+@media (max-width: 850px) {
+  .notes-left-wrapper {
+    min-width: 40vw;
+    position: relative;
+  }
+  .add-note {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: #16008b;
+    position: fixed;
+    bottom: 1rem;
+    left: 30vw;
+    z-index: 5;
+    cursor: pointer;
+  }
+}
+@media (max-width: 800px) {
+  .notes-left-wrapper {
+    width: 30rem;
+  }
+  .add-note {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: #16008b;
+    position: fixed;
+    bottom: 1rem;
+    left: 70vw;
+    z-index: 5;
+    cursor: pointer;
+  }
+}
+@media (max-width: 500px) {
+  .notes-left-wrapper {
+    width: 100vw;
+  }
+  .add-note {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: #16008b;
+    position: fixed;
+    bottom: 1rem;
+    left: 85vw;
+    z-index: 5;
+    cursor: pointer;
+  }
+}
+@media (max-width: 467px) {
+  .notes-left-wrapper {
+    width: 100vw;
+  }
+  .add-note {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: #16008b;
+    position: fixed;
+    bottom: 1rem;
+    left: 78vw;
+    z-index: 5;
+    cursor: pointer;
+  }
 }

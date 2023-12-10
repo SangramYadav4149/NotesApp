@@ -1,12 +1,17 @@
 .home-wrapper {
-  width: 100vw;
-  height: 100vh;
+  width: max-content;
+  height: auto;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 }
 .wrapper-container {
   z-index: 1;
-  width: 100%;
-  display: flex;
+  width: max-content;
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
   justify-content: center;
   align-items: center;
 }

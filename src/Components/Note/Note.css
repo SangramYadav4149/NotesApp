@@ -1,0 +1,49 @@
+.note-wrapper {
+  width: 100%;
+}
+.note-section {
+  width: 100%;
+}
+
+.note-wrapper .note {
+  width: 100%;
+  padding: 1rem 0rem;
+  margin: 0 auto;
+}
+.note > span {
+  width: 90%;
+  height: auto;
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin: 0 auto;
+
+  display: block;
+  word-break: break-all;
+}
+.time-date {
+  width: 98%;
+
+  display: grid;
+  grid-template-columns: max-content max-content max-content;
+  justify-content: end;
+  align-items: center;
+  column-gap: 1rem;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.time-date .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #353535;
+}
+
+.time-date .date {
+  display: block;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,14 +1,36 @@
 import React, { useEffect, useState } from "react";
 import "./CreateNote.css";
-const CreateNote = ({ showCreateSection, setShowCreateSection }) => {
+const CreateNote = ({
+  showCreateSection,
+  setShowCreateSection,
+  rander,
+  setRander,
+}) => {
   const [groupName, setGroupName] = useState("");
   const [color, setColor] = useState("");
   const [showCreateBtn, setShowCreateBtn] = useState(false);
+
   const handleCreateGroup = () => {
     if (!color || !groupName) {
       return;
     } else {
+      const info = {
+        color: color,
+        groupName: groupName,
+        notes: [],
+      };
+      const val = JSON.parse(localStorage.getItem("Notes"));
+      if (val) {
+        localStorage.removeItem("Notes");
+        localStorage.setItem("Notes", JSON.stringify([...val, info]));
+      } else {
+        localStorage.setItem("Notes", JSON.stringify([info]));
+      }
     }
+    setShowCreateSection(false);
+    setRander(!rander);
+    setColor("");
+    setGroupName("");
   };
   const handleSetColor = (clr) => {
     setColor(clr);
@@ -101,7 +123,7 @@ const CreateNote = ({ showCreateSection, setShowCreateSection }) => {
               : "create-note-btn display-show"
           }`}
         >
-          <button>Create</button>
+          <button onClick={() => handleCreateGroup()}>Create</button>
         </div>
       </div>
     </section>

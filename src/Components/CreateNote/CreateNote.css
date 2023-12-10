@@ -81,6 +81,7 @@
   border-radius: 5px;
   color: white;
   margin-right: 1.4rem;
+  cursor: pointer;
 }
 .close {
   top: 0;

@@ -1,8 +1,7 @@
 .notes-right-wrapper {
-  width: 80vw;
+  width: 75vw;
   height: 100vh;
   background-color: #dae5f5;
-
   position: relative;
 }
 .notes-right-container {
@@ -17,6 +16,7 @@
 .notes-right-img {
   width: max-content;
 }
+
 .notes-right-title {
   width: 100%;
   text-align: center;
@@ -44,4 +44,68 @@
 }
 .notes-right-lock > img {
   width: 14px;
+}
+@media (max-width: 1300px) {
+  .notes-right-wrapper {
+    width: 70vw;
+    height: 100vh;
+    background-color: #dae5f5;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .notes-right-img > img {
+    width: 30rem;
+  }
+  .notes-right-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    row-gap: 0.5rem;
+    align-items: center;
+  }
+}
+@media (max-width: 1000px) {
+  .notes-right-wrapper {
+    width: 65vw;
+    height: 100vh;
+    background-color: #dae5f5;
+    position: relative;
+  }
+  .notes-right-img > img {
+    width: 25rem;
+  }
+}
+@media (max-width: 850px) {
+  .notes-right-wrapper {
+    width: 60vw;
+    height: 100vh;
+    background-color: #dae5f5;
+    position: relative;
+  }
+  .notes-right-img > img {
+    width: 20rem;
+  }
+
+  .notes-right-title {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #000000;
+  }
+  .notes-right-side-info {
+    width: 25rem;
+    text-align: center;
+    font-weight: 500;
+    color: #292929;
+    font-size: 16px;
+  }
+}
+@media (max-width: 800px) {
+  .notes-right-wrapper {
+    display: none;
+  }
 }

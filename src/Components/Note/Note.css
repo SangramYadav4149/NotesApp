@@ -40,10 +40,24 @@
   background: #353535;
 }
 
-.time-date .date {
-  display: block;
-  height: 100%;
-  display: flex;
-  justify-content: center;
+.time-date {
+  width: 98%;
+  display: grid;
+  grid-template-columns: max-content max-content max-content;
+  justify-content: end;
   align-items: center;
+  column-gap: 0.5rem;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+@media (max-width: 546px) {
+  .time-date .date {
+    display: block;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

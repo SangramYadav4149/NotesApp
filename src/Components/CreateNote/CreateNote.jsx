@@ -116,14 +116,17 @@ const CreateNote = ({
             ></span>
           </div>
         </div>
-        <div
-          className={`${
-            !showCreateBtn
-              ? "create-note-btn display-none"
-              : "create-note-btn display-show"
-          }`}
-        >
-          <button onClick={() => handleCreateGroup()}>Create</button>
+        <div className="create-note-btn">
+          <button
+            className={`${
+              !showCreateBtn
+                ? "create-note-btn display-none"
+                : "create-note-btn display-show"
+            }`}
+            onClick={() => handleCreateGroup()}
+          >
+            Create
+          </button>
         </div>
       </div>
     </section>

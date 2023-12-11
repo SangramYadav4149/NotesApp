@@ -111,9 +111,24 @@
   align-items: center;
   row-gap: 1rem;
 }
+.note-box-wrapper .send-icon > span {
+  opacity: 0.5;
+}
+.note-box-wrapper .show-send-icon > span {
+  opacity: initial;
+  color: #001f8b;
+}
 @media (max-width: 1300px) {
   .note-box-wrapper {
     width: 70vw;
+  }
+  .text-input-box > textarea {
+    height: 60%;
+    width: 80%;
+    border-radius: 2px;
+    font-size: 1.2rem;
+    padding: 1rem;
+    padding-right: 8vw;
   }
 }
 @media (max-width: 1000px) {
@@ -155,5 +170,43 @@
   .display-show {
     width: 100vw;
     display: block;
+  }
+  .text-input-box .send-icon {
+    width: 40px;
+    position: absolute;
+    right: 3rem;
+    bottom: 2rem;
+    resize: none;
+    cursor: pointer;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 500px) {
+  .text-input-box > textarea {
+    height: 60%;
+    width: 84%;
+    border-radius: 2px;
+    font-size: 1.2rem;
+    padding: 1rem;
+    padding-right: 0;
+  }
+  .text-input-box .send-icon {
+    width: 40px;
+    position: absolute;
+    right: 2.5rem;
+    bottom: 2rem;
+    resize: none;
+    cursor: pointer;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .all-notes-sec {
+    width: 95%;
+    margin: 0 auto;
   }
 }

@@ -16,7 +16,7 @@ const NotesLeft = ({
   const [allNotesTitle, setAllNotesTitle] = useState([]);
 
   useEffect(() => {
-    setAllNotesTitle(JSON.parse(localStorage.getItem("Notes")));
+    setAllNotesTitle(JSON.parse(localStorage.getItem("Notes")).reverse());
   }, [rander]);
   const handleNavigateToTextSection = (val, tag) => {
     setToogleNoteSec(true);
@@ -28,7 +28,7 @@ const NotesLeft = ({
   return (
     <section
       className={`${
-        toogleNoteSec ? "notes-left-wrapper display-none" : "notes-left-wrapper"
+        toogleNoteSec ? "notes-left-wrapper display-off" : "notes-left-wrapper"
       }`}
     >
       <div className="notes-left-container">

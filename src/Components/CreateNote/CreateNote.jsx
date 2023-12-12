@@ -9,33 +9,43 @@ const CreateNote = ({
   const [groupName, setGroupName] = useState("");
   const [color, setColor] = useState("");
   const [showCreateBtn, setShowCreateBtn] = useState(false);
+  const userNotes = JSON.parse(localStorage.getItem("Notes"));
+  const [notValidName, setNotValidName] = useState(false);
 
   const handleCreateGroup = () => {
     if (!color || !groupName) {
       return;
     } else {
-      const info = {
-        color: color,
-        groupName: groupName,
-        notes: [],
-      };
-      const val = JSON.parse(localStorage.getItem("Notes"));
-      if (val) {
-        localStorage.removeItem("Notes");
-        localStorage.setItem("Notes", JSON.stringify([...val, info]));
+      const nameAlreadyExists = userNotes.filter(
+        (val) => val.groupName === groupName
+      );
+      if (!nameAlreadyExists[0]?.groupName) {
+        const info = {
+          color: color,
+          groupName: groupName,
+          notes: [],
+        };
+
+        if (userNotes) {
+          localStorage.removeItem("Notes");
+          localStorage.setItem("Notes", JSON.stringify([...userNotes, info]));
+        } else {
+          localStorage.setItem("Notes", JSON.stringify([info]));
+        }
+        setShowCreateSection(false);
+        setRander(!rander);
+        setColor("");
+        setGroupName("");
       } else {
-        localStorage.setItem("Notes", JSON.stringify([info]));
+        setNotValidName(true);
       }
     }
-    setShowCreateSection(false);
-    setRander(!rander);
-    setColor("");
-    setGroupName("");
   };
   const handleSetColor = (clr) => {
     setColor(clr);
   };
   const handleSetGroupName = (e) => {
+    setNotValidName(false);
     setGroupName(e.target.value);
   };
 
@@ -50,6 +60,11 @@ const CreateNote = ({
   return (
     <section className="create-note-wrapper">
       <div className="create-note-container">
+        <span
+          className={`${notValidName ? "name-error-show" : "name-error-none"}`}
+        >
+          This Groupname is already given !
+        </span>
         <span
           onClick={() => setShowCreateSection(!showCreateSection)}
           className="close"
@@ -68,6 +83,7 @@ const CreateNote = ({
             type="text"
           />
         </div>
+
         <div className="container color-sec">
           <span className="choose-color">Choose color</span>
           <div className="colors-container">

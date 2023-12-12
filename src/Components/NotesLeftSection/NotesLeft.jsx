@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./NotesLeft.css";
+import { IoMdAdd } from "react-icons/io";
 const NotesLeft = ({
   showCreateSection,
   setShowCreateSection,
@@ -16,7 +17,7 @@ const NotesLeft = ({
   const [allNotesTitle, setAllNotesTitle] = useState([]);
 
   useEffect(() => {
-    setAllNotesTitle(JSON.parse(localStorage.getItem("Notes")).reverse());
+    setAllNotesTitle(JSON.parse(localStorage.getItem("Notes"))?.reverse());
   }, [rander]);
   const handleNavigateToTextSection = (val, tag) => {
     setToogleNoteSec(true);
@@ -78,7 +79,7 @@ const NotesLeft = ({
             onClick={() => setShowCreateSection(!showCreateSection)}
             className="add-icon"
           >
-            +
+            <IoMdAdd size={35} />
           </span>
         </div>
       </div>

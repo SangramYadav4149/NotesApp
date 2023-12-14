@@ -120,10 +120,12 @@
 }
 .note-box-wrapper .send-icon > span {
   opacity: 0.5;
+  cursor: not-allowed;
 }
 .note-box-wrapper .show-send-icon > span {
   opacity: initial;
   color: #001f8b;
+  cursor: pointer;
 }
 @media (max-width: 1300px) {
   .note-box-wrapper {

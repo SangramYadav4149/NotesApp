@@ -16,9 +16,8 @@ const CreateNote = ({
     if (!color || !groupName) {
       return;
     } else {
-      const nameAlreadyExists = userNotes.filter(
-        (val) => val.groupName === groupName
-      );
+      const nameAlreadyExists =
+        userNotes?.filter((val) => val.groupName === groupName) || [];
       if (!nameAlreadyExists[0]?.groupName) {
         const info = {
           color: color,
@@ -46,7 +45,7 @@ const CreateNote = ({
   };
   const handleSetGroupName = (e) => {
     setNotValidName(false);
-    setGroupName(e.target.value);
+    setGroupName(e.target.value.trim());
   };
 
   useEffect(() => {

@@ -36,12 +36,12 @@ const NoteBox = ({
     }
   };
   const setGroupNameAndValidateText = (e) => {
-    if (e.target.value) {
+    if (e.target.value.trim()) {
       setShowTextSaveOpt(true);
-    } else if (e.target.value.length === 1 || !e.target.value.length) {
+    } else if (e.target.value?.trim().length === 1 || !e.target.value.length) {
       setShowTextSaveOpt(false);
     }
-    setNote(e.target.value);
+    setNote(e.target.value.trim());
   };
   const handleSaveText = () => {
     if (!note) {
